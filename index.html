@@ -58,6 +58,7 @@
       color: #0f172a;
     }
 
+    /* FIXED CARD */
     .card {
       background: rgb(64, 97, 83);
       color: white;
@@ -65,6 +66,10 @@
       border-radius: 10px;
       margin-top: 10px;
       border: 2px solid rgb(64, 97, 83);
+
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
     }
 
     .card a {
@@ -78,8 +83,10 @@
       gap: 15px;
     }
 
+    /* FIXED INPUTS */
     input, textarea {
       width: 100%;
+      box-sizing: border-box;
       padding: 10px;
       margin-top: 6px;
       border-radius: 6px;
@@ -87,6 +94,7 @@
       background: #f8fafc;
       color: #0f172a;
       outline: none;
+      resize: vertical;
     }
 
     button {
