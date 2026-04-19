@@ -11,7 +11,6 @@
       font-family: Arial, sans-serif;
       background: #0b1220;
       color: #e5e7eb;
-      line-height: 1.6;
     }
 
     header {
@@ -20,14 +19,13 @@
     }
 
     h1 {
-      font-size: 54px;
+      font-size: 56px;
       margin: 0;
-      letter-spacing: 1px;
     }
 
     .subtitle {
-      margin-top: 10px;
       color: #94a3b8;
+      margin-top: 10px;
       font-size: 18px;
     }
 
@@ -37,7 +35,7 @@
 
     nav a {
       color: #94a3b8;
-      margin: 0 12px;
+      margin: 0 10px;
       text-decoration: none;
       font-size: 14px;
     }
@@ -53,10 +51,9 @@
     }
 
     h2 {
-      font-size: 22px;
       border-left: 3px solid #38bdf8;
       padding-left: 10px;
-      margin-bottom: 15px;
+      font-size: 22px;
     }
 
     .card {
@@ -72,15 +69,36 @@
       gap: 15px;
     }
 
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: none;
+      background: #1f2937;
+      color: white;
+      outline: none;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
       color: #64748b;
       font-size: 13px;
-    }
-
-    a {
-      color: #38bdf8;
     }
   </style>
 </head>
@@ -90,13 +108,14 @@
 <header>
   <h1>Dihas Nanayakkara</h1>
   <div class="subtitle">
-    Independent Researcher • Technology • Science
+    Independent Research & Technology
   </div>
 
   <nav>
     <a href="#about">About</a>
     <a href="#work">Work</a>
     <a href="#interests">Interests</a>
+    <a href="#details">Details</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -104,8 +123,8 @@
 <section id="about">
   <h2>About</h2>
   <div class="card">
-    I am focused on exploring advanced concepts in physics, computation, and engineering.
-    My work involves experimentation, problem solving, and building technical systems.
+    Focused on physics, computation, and engineering systems.  
+    Interested in building practical solutions through research and experimentation.
   </div>
 </section>
 
@@ -115,17 +134,17 @@
 
     <div class="card">
       <strong>Computational Physics</strong>
-      <p>Simulation-based exploration of physical systems using Python.</p>
+      <p>Simulation and modelling of physical systems using Python.</p>
     </div>
 
     <div class="card">
-      <strong>Robotics Systems</strong>
-      <p>Design concepts for autonomous assistive robotic platforms.</p>
+      <strong>Robotics Concepts</strong>
+      <p>Design of autonomous assistive systems and navigation logic.</p>
     </div>
 
     <div class="card">
       <strong>Technical Projects</strong>
-      <p>Various experiments in electronics, AI, and applied science.</p>
+      <p>Exploring applied electronics, AI, and system design.</p>
     </div>
 
   </div>
@@ -134,22 +153,57 @@
 <section id="interests">
   <h2>Interests</h2>
   <div class="card">
-    Physics • Quantum Systems • Artificial Intelligence • Robotics • Engineering Design • Computational Modelling
+    Physics • Quantum Mechanics • Artificial Intelligence • Robotics • Engineering • Computational Modelling
+  </div>
+</section>
+
+<section id="details">
+  <h2>Details</h2>
+
+  <div class="card">
+    <p><strong>Email:</strong> dihas.nanayakkara@gmail.com</p>
+    <p><strong>Location:</strong> Sri Lanka</p>
+    <p><strong>Telephone:</strong> +94 770625232</p>
+    <p><strong>Status:</strong> Open to academic discussions and collaborations</p>
+  </div>
+
+  <div class="card">
+    <p><strong>Focus Areas</strong></p>
+    <p>Physics • Quantum Mechanics • AI Systems • Engineering Design • Computational Modelling</p>
+  </div>
+
+  <div class="card">
+    <p><strong>Links</strong></p>
+    <p>
+      GitHub: https://github.com/yourusername<br>
+      LinkedIn: https://linkedin.com/in/yourprofile
+    </p>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
+
   <div class="card">
-    Email: dihas.nanayakkara@gmail.com <br>
-    Location: Sri Lanka <br>
-    Telephone: +94 770725232 <br>
-    Open to collaborations and academic opportunities
+    <form action="https://formspree.io/f/xrerkopw" method="POST">
+
+      <label>Your Name</label>
+      <input type="text" name="name" required>
+
+      <label>Your Email</label>
+      <input type="email" name="email" required>
+
+      <label>Message</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
   </div>
 </section>
 
 <footer>
-  © Dihas Nanayakkara
+  © Dihas Nanayakkara • Built and deployed via modern web tools
 </footer>
 
 </body>
