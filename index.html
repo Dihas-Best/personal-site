@@ -1,229 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dihas Nanayakkara</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dihas Nanayakkara</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: rgb(249, 245, 235);
-      color: #0f172a;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: rgb(249,245,235);
+  color: #0f172a;
+}
 
-    header {
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
+header {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
 
-    h1 {
-      font-size: 56px;
-      margin: 0;
-      color: #1f2937;
-    }
+h1 {
+  margin: 0;
+  font-size: 48px;
+}
 
-    .subtitle {
-      color: #334155;
-      margin-top: 10px;
-      font-size: 18px;
-    }
+nav {
+  margin-top: 20px;
+}
 
-    nav {
-      margin-top: 20px;
-    }
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(64,97,83);
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    nav a {
-      color: #334155;
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+section {
+  display: none;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-    nav a:hover {
-      color: rgb(64, 97, 83);
-    }
+.active {
+  display: block;
+}
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+.card {
+  background: rgb(64,97,83);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  word-wrap: break-word;
+}
 
-    h2 {
-      border-left: 4px solid rgb(64, 97, 83);
-      padding-left: 10px;
-      font-size: 22px;
-      color: #0f172a;
-    }
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 2px solid rgb(64,97,83);
+  background: #f8fafc;
+}
 
-    /* FIXED CARD */
-    .card {
-      background: rgb(64, 97, 83);
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 10px;
-      border: 2px solid rgb(64, 97, 83);
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgb(64,97,83);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      white-space: normal;
-    }
-
-    .card a {
-      color: #e5f3ea;
-      text-decoration: underline;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 15px;
-    }
-
-    /* FIXED INPUTS */
-    input, textarea {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 10px;
-      margin-top: 6px;
-      border-radius: 6px;
-      border: 2px solid rgb(64, 97, 83);
-      background: #f8fafc;
-      color: #0f172a;
-      outline: none;
-      resize: vertical;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 10px 16px;
-      background: rgb(64, 97, 83);
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      color: white;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #475569;
-      font-size: 13px;
-    }
-  </style>
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #475569;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Dihas Nanayakkara</h1>
-  <div class="subtitle">
-    Independent Research & Technology
-  </div>
+<h1>Dihas Nanayakkara</h1>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#interests">Interests</a>
-    <a href="#details">Details</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a onclick="showPage('home')">Home</a>
+  <a onclick="showPage('about')">About</a>
+  <a onclick="showPage('work')">Work</a>
+  <a onclick="showPage('contact')">Contact</a>
+</nav>
 </header>
 
+<!-- HOME -->
+<section id="home" class="active">
+  <div class="card">
+    Independent Research & Technology
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section id="about">
-  <h2>About</h2>
   <div class="card">
-    Focused on physics, computation, and engineering systems.  
-    Interested in building practical solutions through research and experimentation.
+    Focused on physics, computation, and engineering systems.
   </div>
 </section>
 
+<!-- WORK -->
 <section id="work">
-  <h2>Work</h2>
-  <div class="grid">
+  <div class="card">
+    <strong>Computational Physics</strong>
+    <p>Simulation and modelling of physical systems.</p>
+  </div>
 
-    <div class="card">
-      <strong>Computational Physics</strong>
-      <p>Simulation and modelling of physical systems using Python.</p>
-    </div>
-
-    <div class="card">
-      <strong>Robotics Concepts</strong>
-      <p>Design of autonomous assistive systems and navigation logic.</p>
-    </div>
-
-    <div class="card">
-      <strong>Technical Projects</strong>
-      <p>Exploring applied electronics, AI, and system design.</p>
-    </div>
-
+  <div class="card">
+    <strong>Robotics</strong>
+    <p>Design of assistive systems and automation.</p>
   </div>
 </section>
 
-<section id="interests">
-  <h2>Interests</h2>
-  <div class="card">
-    Physics • Quantum Mechanics • Artificial Intelligence • Robotics • Engineering • Computational Modelling
-  </div>
-</section>
-
-<section id="details">
-  <h2>Details</h2>
-
-  <div class="card">
-    <p><strong>Email:</strong> dihas.nanayakkara@gmail.com</p>
-    <p><strong>Location:</strong> Sri Lanka</p>
-    <p><strong>Telephone:</strong> +94 770625232</p>
-    <p><strong>Status:</strong> Open to academic discussions and collaborations</p>
-  </div>
-
-  <div class="card">
-    <p><strong>Focus Areas</strong></p>
-    <p>Physics • Quantum Mechanics • AI Systems • Engineering Design • Computational Modelling</p>
-  </div>
-
-  <div class="card">
-    <p><strong>Links</strong></p>
-    <p>
-      <a href="https://www.linkedin.com/in/dihas-nanayakkara-765674318/" target="_blank">
-        LinkedIn Profile
-      </a>
-    </p>
-  </div>
-</section>
-
+<!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
-
   <div class="card">
     <form action="https://formspree.io/f/xrerkopw" method="POST">
-
-      <label>Your Name</label>
-      <input type="text" name="name" required>
-
-      <label>Your Email</label>
-      <input type="email" name="email" required>
-
-      <label>Message</label>
-      <textarea name="message" rows="5" required></textarea>
-
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
       <button type="submit">Send Message</button>
-
     </form>
   </div>
 </section>
 
 <footer>
-  © Dihas Nanayakkara • Built and deployed via modern web tools
+© Dihas Nanayakkara
 </footer>
+
+<script>
+function showPage(pageId) {
+  const sections = document.querySelectorAll("section");
+  sections.forEach(sec => sec.classList.remove("active"));
+
+  document.getElementById(pageId).classList.add("active");
+}
+</script>
 
 </body>
 </html>
