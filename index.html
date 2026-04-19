@@ -13,39 +13,56 @@ body {
   color: #0f172a;
 }
 
-header {
+/* HERO SECTION */
+.hero {
   text-align: center;
-  padding: 60px 20px 20px;
+  padding: 100px 20px 60px;
 }
 
-h1 {
+.hero h1 {
+  font-size: 56px;
   margin: 0;
-  font-size: 48px;
 }
 
-nav {
-  margin-top: 20px;
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #334155;
 }
 
-nav a {
-  margin: 0 10px;
+/* BUTTONS */
+.buttons {
+  margin-top: 25px;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 18px;
+  background: rgb(64,97,83);
+  color: white;
   text-decoration: none;
-  color: rgb(64,97,83);
-  font-weight: bold;
-  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
+.buttons a:hover {
+  opacity: 0.9;
+}
+
+/* SECTIONS */
 section {
-  display: none;
   max-width: 900px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
-.active {
-  display: block;
+h2 {
+  border-left: 4px solid rgb(64,97,83);
+  padding-left: 10px;
 }
 
+/* CARDS */
 .card {
   background: rgb(64,97,83);
   color: white;
@@ -55,6 +72,14 @@ section {
   word-wrap: break-word;
 }
 
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+/* FORM */
 input, textarea {
   width: 100%;
   box-sizing: border-box;
@@ -75,6 +100,7 @@ button {
   cursor: pointer;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
@@ -85,46 +111,72 @@ footer {
 
 <body>
 
-<header>
-<h1>Dihas Nanayakkara</h1>
+<!-- HERO -->
+<div class="hero">
+  <h1>Dihas Nanayakkara</h1>
+  <p>Independent Research & Technology</p>
 
-<nav>
-  <a onclick="showPage('home')">Home</a>
-  <a onclick="showPage('about')">About</a>
-  <a onclick="showPage('work')">Work</a>
-  <a onclick="showPage('contact')">Contact</a>
-</nav>
-</header>
-
-<!-- HOME -->
-<section id="home" class="active">
-  <div class="card">
-    Independent Research & Technology
+  <div class="buttons">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#details">Details</a>
+    <a href="#contact">Contact</a>
   </div>
-</section>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
+  <h2>About</h2>
   <div class="card">
     Focused on physics, computation, and engineering systems.
+    Interested in building practical solutions through research and experimentation.
   </div>
 </section>
 
 <!-- WORK -->
 <section id="work">
+  <h2>Work</h2>
+
+  <div class="grid">
+    <div class="card">
+      <strong>Computational Physics</strong>
+      <p>Simulation and modelling of physical systems.</p>
+    </div>
+
+    <div class="card">
+      <strong>Robotics</strong>
+      <p>Design of assistive and autonomous systems.</p>
+    </div>
+
+    <div class="card">
+      <strong>Engineering Projects</strong>
+      <p>Applied electronics and system design.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILS -->
+<section id="details">
+  <h2>Details</h2>
+
   <div class="card">
-    <strong>Computational Physics</strong>
-    <p>Simulation and modelling of physical systems.</p>
+    <p><strong>Email:</strong> dihas.nanayakkara@gmail.com</p>
+    <p><strong>Location:</strong> Sri Lanka</p>
+    <p><strong>Telephone:</strong> +94 770625232</p>
   </div>
 
   <div class="card">
-    <strong>Robotics</strong>
-    <p>Design of assistive systems and automation.</p>
+    <p><strong>Links</strong></p>
+    <a href="https://www.linkedin.com/in/dihas-nanayakkara-765674318/" target="_blank">
+      LinkedIn Profile
+    </a>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
+  <h2>Contact</h2>
+
   <div class="card">
     <form action="https://formspree.io/f/xrerkopw" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -138,15 +190,6 @@ footer {
 <footer>
 © Dihas Nanayakkara
 </footer>
-
-<script>
-function showPage(pageId) {
-  const sections = document.querySelectorAll("section");
-  sections.forEach(sec => sec.classList.remove("active"));
-
-  document.getElementById(pageId).classList.add("active");
-}
-</script>
 
 </body>
 </html>
